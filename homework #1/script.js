@@ -4,10 +4,11 @@ var user = {
 };
 
 var login = prompt("Login");
+var maxAttempts = 5;
 
 if (login === user.login) {
-    for (i = 0; i < 5; i++) {
-        var attemptsCounter = 5 - i;
+    for (i = 0; i < maxAttempts; i++) {
+        var attemptsCounter = maxAttempts - i;
         var password = prompt("Password \nyou have " + attemptsCounter + " attempts");
         if (password === user.password) {
             alert("You have successfully logged in!");
